@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@pxo8_qz@7znpj8*)a*do=d58&@o3#z_bb5p(tff%p60nx_k=@
 DEBUG = True
 """ 
 ALLOWED_HOSTS = ["BelAlegrette.pythonanywhere.com"] """
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 CUSTOM_APPS = [
@@ -140,8 +140,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-""" 
-STATIC_ROOT = BASE_DIR/"staticfiles" """
+
+# STATIC_ROOT = BASE_DIR/"staticfiles" 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
