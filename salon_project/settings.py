@@ -24,9 +24,9 @@ SECRET_KEY = 'django-insecure-@pxo8_qz@7znpj8*)a*do=d58&@o3#z_bb5p(tff%p60nx_k=@
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ["BelAlegrette.pythonanywhere.com"]
-
+""" 
+ALLOWED_HOSTS = ["BelAlegrette.pythonanywhere.com"] """
+ALLOWED_HOSTS = []
 
 # Application definition
 CUSTOM_APPS = [
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'salon_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'BelAlegrette$salon_project',
@@ -93,8 +93,13 @@ DATABASES = {
         'HOST': 'BelAlegrette.mysql.pythonanywhere-services.com',
         'PORT': '3306'
     }
+} """
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -130,13 +135,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static"
+    BASE_DIR / 'static'
 ]
-
-STATIC_ROOT = BASE_DIR/"staticfiles"
+""" 
+STATIC_ROOT = BASE_DIR/"staticfiles" """
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
