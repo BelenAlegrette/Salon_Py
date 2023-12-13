@@ -1,0 +1,17 @@
+
+
+<main>
+  <div>
+    <h1>{{evento.nombre}}</h1>
+    {% for label, value in evento.get_fields %}
+    <div>
+      <span>{{label | upper}}</span>
+      <span> <i> {{value}} </i> </span>
+    </div>
+
+    {% endfor %}
+
+    <a href="{% url 'salon_app:evento_all' %}">Ir al inicio</a>
+  </div>
+</main>
+

@@ -1,0 +1,16 @@
+.formulario-container {
+    max-width: 500px;
+    margin: 0 auto;
+    /* Otros estilos que desees aplicar al contenedor del formulario */
+  }
+  
+  .mi-formulario {
+    background-color: #f0f0f0;
+    padding: 20px;
+    /* Otros estilos para el formulario */
+  }
+  
+  .volver-enlace {
+    color: #007bff;
+    /* Otros estilos para el enlace */
+  }
