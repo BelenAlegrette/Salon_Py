@@ -6,8 +6,7 @@
 @import url("./main/modal_cards/style.css");
 @import url("./main/gallery/style.css");
 @import url("./footer/style.css");
-@import url("./eventos/style.css");
-@import url("./evento_create/style.css");
+@import url("./crud/style.css");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap");
 
 *,
@@ -70,7 +69,7 @@ main {
 }
 
 /* Galeria api*/
-
+/* 
 .contenedor {
   width: 100%;
   display: grid;
@@ -86,7 +85,7 @@ main {
   box-shadow: 0 0 10px #000;
   transform: translateY(-5px) scale(1.01);
   z-index: 1;
-}
+} */
 
 
 
