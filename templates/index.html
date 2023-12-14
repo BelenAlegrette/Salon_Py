@@ -140,20 +140,36 @@
     <div class="title_events"><h2>Nuestros eventos</h2></div>
     
     <div class="events">
+      
+      <div id="app">
       <div class="event">
       <img src="{% static 'media/images/4-3.jpg' %}" alt="Evento 1">
 
       <div class="event-text">
       <p>EVENTOS SOCIALES</p>
-      <a href="pagina-evento1.html" class="button">Ver más</a>
+      <button @click="mostrarFormulario" class="button">RESERVAR</button>
+      <button @click="ocultarFormulario" class="button">Cancelar</button>
+
+
+      <!-- VUE -->
+      <form v-if="mostrarForm" @submit.prevent="enviarFormulario">
+      
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" v-model="nombre" required>
+        <button type="submit" class="button">Enviar</button>
+      </form>
     </div>
-    </div>
+  </div>
+</div>
+
+     <!--  <a href="pagina-evento1.html" class="button">Ver más</a> -->
+
 
     <div class="event">
       <img src="{% static 'media/images/5-3.jpg' %}" alt="Evento 2">
       <div class="event-text">
       <p>EVENTOS CORPORATIVOS</p>
-      <a href="pagina-evento2.html" class="button">Ver más</a>
+      <!-- <a href="pagina-evento2.html" class="button">Ver más</a> -->
     </div>
   </div>
   </div>

@@ -102,4 +102,30 @@
  <!-- scripts -->
  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
+ <!-- Script VUE -->
+ <script>
+  new Vue({
+    el: '#app',
+    data: {
+      mostrarForm: false, // OCULTO FORM
+      nombre: '', 
+      email: '',
+      mensaje: '',
+    },
+    methods: {
+      mostrarFormulario() {
+        
+        this.mostrarForm = true;
+      },
+
+      ocultarFormulario() {
+        this.mostrarForm = false;
+        this.nombre = '';
+      },
+      enviarFormulario() {
+        console.log('Formulario enviado con nombre:', this.nombre);
+      }
+    }
+  });
+</script>
 </html>
