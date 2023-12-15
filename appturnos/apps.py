@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class SalonAppConfig(AppConfig):
+class AppturnosConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'salon_app'
+    name = 'appturnos'
