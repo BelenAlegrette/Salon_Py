@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 offset-4">
+            <h1>Edita tu evento</h1>
+<h2>{{reserva.tipo_evento}}</h2> 
+<p>{{reserva.nombre}} {{reserva.apellido}} {{reserva.fecha}} {{reserva.hora}} </p>
+{{error}}
+<form method= 'POST' class="card card-body">
+    {% csrf_token %}
+    {{form.as_p}}
+
+<div class="d-flex">
+    <button class="btn btn-primary">
+        Actualizar
+    </button>
+    </form>
+    <form action="{% url 'realizado' res_id=reserva.id %}" method='POST'>
+        {% csrf_token %}
+        <button class="btn btn-warning">
+            Realizado
+        </button>
+    </form>
+    
+    <form action="{% url 'borrar' res_id=reserva.id %}" method='POST'>
+        {% csrf_token %}
+        <button class="btn btn-danger">
+            Borrar
+        </button>
+</div>
+</form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock  %}
